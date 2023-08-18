@@ -1,0 +1,106 @@
+html {
+    background-color: #010a01;
+    background-size: cover;
+    font-family: 'helvetica neue';
+    text-align: center;
+    font-size: 10px;
+  }
+
+  body {
+    margin: 0;
+    font-size: 2rem;
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+  }
+
+  .clock {
+    width: 30rem;
+    height: 30rem;
+    border: 20px solid #fff;
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+    padding: 2rem;
+    box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #f09,
+    0 0 82px #f09,
+    0 0 92px #f09,
+    0 0 102px #f09,
+    0 0 151px #f09;
+    animation: pulsate 0.11s ease-in-out infinite alternate;  
+  }
+
+  @keyframes pulsate {
+  
+  100% {
+
+      box-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #f09,
+      0 0 80px #f09,
+      0 0 90px #f09,
+      0 0 100px #f09,
+      0 0 150px #f09;
+  
+  }
+  
+  0% {
+
+    box-shadow:
+    0 0 4px #fff,
+    0 0 10px #fff,
+    0 0 18px #fff,
+    0 0 38px #f09,
+    0 0 73px #f09,
+    0 0 80px #f09,
+    0 0 94px #f09,
+    0 0 140px #f09;
+
+}}
+
+  .clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px);
+  }
+
+  .hand {
+    height: 4px;
+    background: black;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transition: all 0.05;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    box-shadow:
+    0 0 1px #fff,
+    0 0 2px #fff,
+    0 0 3px #fff;
+  }
+
+  .hours{
+    background: #ED75EE;
+    width: 50%;
+    transform: rotate(90deg);
+  }
+
+  .minutes{
+    background: #C4B3FF;
+    width: 40%;
+    left: 10%;
+    transform: rotate(90deg);
+  }
+
+  .seconds{
+    background: #A2E6FF;
+    width: 50%;
+    transform: rotate(90deg);
+  }
